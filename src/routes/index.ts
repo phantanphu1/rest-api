@@ -1,11 +1,11 @@
 import express from "express";
+import { userRouter } from "./user_router";
 
 const router = express.Router();
 const routes = () => {
-   
-  
-    return router;
-  };
-  
-  export default routes;
-  
+
+  userRouter(router);
+  return router;
+};
+
+export default routes;
