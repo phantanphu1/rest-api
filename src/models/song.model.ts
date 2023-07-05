@@ -48,6 +48,8 @@ const songSchema = new mongoose.Schema<ISong>(
             required: false,
         },
         like: [{ type: String, required: false, default: [] }],
+        statisticCmt: [{ type: Object, required: true, default: [] }],
+
     },
     {
         timestamps: true,

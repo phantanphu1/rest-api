@@ -4,6 +4,7 @@ import { errorFunction } from "../utils/errorFunction";
 import { ISong } from "../types/song";
 
 const validation = joi.object<ISong>({
+    userId: joi.string().required(),
     title: joi.string().required().min(5).max(50),
     artist: joi.string().required().email(),
     duration: joi.string().min(6).max(20).required(),

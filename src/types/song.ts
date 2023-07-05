@@ -10,5 +10,7 @@ export interface ISong {
     imageUrl: string;
     audioUrl: string;
     rating: number;
-    like: string;
+    like: string[];
+    statisticCmt: { _id: string; rateComments: boolean }[];
+
 }
