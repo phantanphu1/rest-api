@@ -17,7 +17,7 @@ const validation = joi.object<ISong>({
     like: joi.string()
 });
 
-export const userValidation = async (
+export const songValidation = async (
     req: Request,
     res: Response,
     next: NextFunction

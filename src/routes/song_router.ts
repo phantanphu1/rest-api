@@ -1,13 +1,14 @@
+import { songValidation } from "../helpers/song";
 import songController from "../controllers/song_controller";
 import { Router } from "express";
-export const songRouter = (routes: Router) => {
-    routes.post("/song/addSong", songController.addSong)
+export const songRouter = (router: Router) => {
+    router.post("/song/addSong", songValidation, songController.addSong)
 
-    routes.get("/song/getSongById/:id", songController.getSongById)
+    router.get("/song/getSongById/:id", songController.getSongById)
 
-    routes.get("/song/getAll", songController.getAllSong)
+    router.get("/song/getAll", songController.getAllSong)
 
-    routes.put("/song/updateSong/:id", songController.updateSong)
+    router.put("/song/updateSong/:id", songController.updateSong)
 
-    routes.delete("/song/deleteSong/:id", songController.deleteSong)
+    router.delete("/song/deleteSong/:id", songController.deleteSong)
 }
